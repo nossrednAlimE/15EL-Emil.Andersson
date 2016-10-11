@@ -1,0 +1,24 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class Grafik extends JFrame {
+private int width = 100;
+private int height = 100;
+
+public Grafik (){
+	setSize(900, 700); //xy
+	setLocation(300, 100);
+	setDefaultCloseOperation(3);
+	setTitle("Hearth Stone");
+	setResizable(true);
+	setVisible(true);
+
+}
+	public static void main(String[] args) {
+		new Grafik();
+	}
+public void paint(Graphics g){
+	g.setColor(Color.red);
+	g.drawRect(70, 100, width, height);
+}
+}

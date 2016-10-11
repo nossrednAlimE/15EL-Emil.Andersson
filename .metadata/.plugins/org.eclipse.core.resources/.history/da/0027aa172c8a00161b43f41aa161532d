@@ -1,0 +1,35 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class Grafik extends JFrame {
+private int width = 100;
+private int height = 100;
+
+private int d = 500;
+
+public Grafik (){
+	setSize(Toolkit.getDefaultToolkit().getScreenSize());
+	setExtendedState(JFrame.MAXIMIZED_BOTH);
+	setUndecorated(false);
+	setVisible(true);
+	setDefaultCloseOperation(3);
+	setTitle("Java Application");
+	setResizable(true);
+	
+
+}
+	public static void main(String[] args) {
+		new Grafik();
+	}
+
+public void paint(Graphics g){
+	g.setColor(Color.black);
+	g.fillRect(0, 0, 1920, 1080);
+	g.setColor(Color.red);
+	g.drawRect(70, 100, width, height);
+	g.setColor(Color.BLUE);
+	g.fillRect(160, 200, width, height);
+	g.setColor(Color.PINK);
+	g.drawOval(300, 250, d, d);
+}
+}

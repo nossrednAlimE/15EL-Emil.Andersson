@@ -1,0 +1,34 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class Grafik extends JFrame {
+private int width = 100;
+private int height = 100;
+
+private int d = 500;
+
+public Grafik (){
+	setExtendedState(JFrame.MAXIMIZED_BOTH);
+	setUndecorated(false);
+	setVisible(true);
+	setDefaultCloseOperation(3);
+	setTitle("WINDOWS DEFENDER 2003 PREMIUM EDITION");
+	setResizable(true);
+	
+
+}
+	public static void main(String[] args) {
+		new Grafik();
+	}
+
+public void paint(Graphics g){
+	g.setColor(Color.MAGENTA);
+	g.fillRect(0, 0, 2000, 900);
+	g.setColor(Color.WHITE);
+	g.drawRect(70, 100, width, height);
+	g.setColor(Color.WHITE);
+	g.fillRect(160, 200, width, height);
+	g.setColor(Color.WHITE);
+	g.drawOval(300, 250, d, d);
+}
+}
